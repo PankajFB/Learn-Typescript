@@ -1,13 +1,17 @@
 import React from 'react'
 
-function UserList() {
+
+
+type propsType = {
+    data: { name: string, age: number }[]
+}
+
+function UserList(data: propsType) {
   return (
     <div>
-       {/* {userList.map((user, index) => (
-            <li key={index}>
-                {user.name} ({user.age})
-            </li>
-        ))} */}
+       {data.data.map((user, index) => (
+        <li key={index}>{user.name} and {user.age}</li>
+       ) )}
     </div>
   )
 }
